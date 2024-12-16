@@ -3,7 +3,6 @@ function toggleMenu() {
     var menuButton = document.getElementById("menu-btn");  
     if(menuList.classList.contains("active")){
       menuList.classList.remove("active");
-      /*menuButton.innerHTML = "Menu";*/
       menuButton.innerHTML = "<div class=\"icon checkbox-default\"> </div>";
     }else{
       menuList.classList.add("active");
