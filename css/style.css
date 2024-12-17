@@ -396,6 +396,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .footer {
   margin-top: 3.5rem;
   border: 2px #373633 solid;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #373633;
 }
 .footer .footer-text {
   margin-top: 2rem;
