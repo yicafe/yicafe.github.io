@@ -98,6 +98,10 @@
                    
           
           
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
         </ul>
       </nav>
     </div>
@@ -123,7 +127,85 @@
     <div class="h-line-primary"></div>
 </div>
     <div class="post-content">
-    
+      <style>
+
+
+
+    /* 头像样式 */
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid rgba(0, 0, 0, 0.1); /* 浅色边框 */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+      object-fit: cover; /* 确保图片比例正确 */
+    }
+
+    /* 标题样式 */
+    h1 {
+      font-size: 28px;
+      margin: 10px 0;
+      color: #333; /* 灰色字体 */
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      color: #666; /* 浅灰色字体 */
+      margin-bottom: 30px;
+    }
+
+    /* 链接按钮样式 */
+    .link-button {
+      display: block;
+      background: #f5f5f5; /* 浅灰色背景 */
+      color: #333; /* 灰色字体 */
+      text-decoration: none;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      font-size: 16px;
+      font-weight: 500;
+      border: 1px solid rgba(0, 0, 0, 0.1); /* 浅色边框 */
+    }
+
+    .link-button:hover {
+      background: #e0e0e0; /* 悬停时背景变深 */
+      transform: translateY(-3px); /* 悬停时按钮上移 */
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .link-button {
+        padding: 12px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 头像 -->
+    <img src="http://localhost:4000/logo.png" alt="Avatar" class="avatar">
+    <!-- 标题 -->
+    <h1></h1>
+    <p>内容创作者/作品分享</p>
+    <!-- 社交链接 -->
+    <a href="https://cliooz.cn" class="link-button" target="_blank">cliooz.cn</a>
+    <a href="https://space.bilibili.com/107561216" class="link-button" target="_blank">哔哩哔哩</a>
+    <a href="https://weibo.com/u/7958089878" class="link-button" target="_blank">微博</a>
+  </div>
+</body>
 </div> 
 
 <script>
@@ -135,12 +217,13 @@
       </div>
       
       <div class="footer">
-    <div class="flex-container">
+    <div class="">
         <div class="footer-text">
             
+                Jewelry  Design  Creative Tips
+                <br>
             
             
-                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
                 
         </div>
     </div>
@@ -148,6 +231,37 @@
 
     </div>
 
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
     
     
 

@@ -98,6 +98,10 @@
                    
           
           
+            <li class="menu-item search-btn">
+              <a href="#">Search</a>
+            </li>
+          
         </ul>
       </nav>
     </div>
@@ -124,7 +128,6 @@
 </div>
     <div class="post-content">
     <p>嗨，我是cliooz,开始分享<br>1，每日热评图文内容<br>2，分享一些学习Grasshopper内容<br>3，原创设计内容（rhino模型）<br>目前都是我自己独立编辑制作、只发布一些快速、简洁且高效的学习内容。<br>如果你喜歡我的內容，我希望可以收到你的一键三连！</p>
-<p>欢迎投稿：<a target="_blank" rel="noopener" href="https://weibo.com/u/7958089878">@Cliooz 的个人主页 - 微博</a></p>
 
 </div> 
 
@@ -137,12 +140,13 @@
       </div>
       
       <div class="footer">
-    <div class="flex-container">
+    <div class="">
         <div class="footer-text">
             
+                Jewelry  Design  Creative Tips
+                <br>
             
             
-                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
                 
         </div>
     </div>
@@ -150,6 +154,37 @@
 
     </div>
 
+    
+      <div class="search-popup">
+    <div class="search-popup-overlay">  
+    </div>
+    <div class="search-popup-window" >
+        <div class="search-header">
+            <div class="search-input-container">
+              <input autocomplete="off" autocapitalize="off" maxlength="80"
+                     placeholder="Search Anything" spellcheck="false"
+                     type="search" class="search-input">
+            </div>
+            <div class="search-close-btn">
+                <div class="icon close-btn"></div>
+            </div>
+        </div>
+        <div class="search-result-container">
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchConfig = {
+        path             : "/search.xml",
+        top_n_per_article: "1",
+        unescape         : "false",
+        trigger: "auto",
+        preload: "false"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+<script src="/js/search.js"></script>
     
     
 
